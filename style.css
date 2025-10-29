@@ -1,0 +1,148 @@
+:root {
+  --bg: #13595ea1;
+  --card: #a6c9d1;
+  --muted: #6b7280;
+  --primary-start: #2563eb;
+  --primary-end: #7c3aed;
+  --danger: #ef4444;
+  --success: #10b981;
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, var(--bg), #ff00ea 120%);
+  display: flex;
+  color:brown;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 30px;
+}
+
+.contact-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: 0 6px 30px rgba(15, 23, 42, 0.08);
+  width: 100%;
+  max-width: 720px;
+  padding: 28px;
+  display: grid;
+  gap: 18px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 640px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #e6e9ef;
+  font-size: 14px;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--primary-start);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.error {
+  color: var(--danger);
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn {
+  background: linear-gradient(90deg, var(--primary-start), var(--primary-end));
+  color: rgb(0, 0, 0);
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.secondary {
+  background: transparent;
+  border: 1px solid #6db7fc;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.status {
+  font-size: 13px;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.status.success {
+  color: var(--success);
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.status.error {
+  color: var(--danger);
+  background: rgba(239, 68, 68, 0.1);
+}

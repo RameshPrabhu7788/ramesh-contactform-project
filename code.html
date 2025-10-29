@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="contact-card" aria-live="polite">
+      <div class="header">
+        <div>
+          <h1 class="title">Contact Us</h1>
+          <p class="subtitle">Send us a message — we’ll respond soon.</p>
+        </div>
+        <div id="responseBadge" class="status" style="visibility:hidden"></div>
+      </div>
+
+      <form id="contactForm" novalidate>
+        <div class="row">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required placeholder="Your full name" />
+            <div id="nameErr" class="error" style="display:none"></div>
+          </div>
+
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required placeholder="you@example.com" />
+            <div id="emailErr" class="error" style="display:none"></div>
+          </div>
+        </div>
+
+        <div>
+          <label for="subject">Subject</label>
+          <input id="subject" name="subject" type="text" placeholder="Subject" />
+        </div>
+
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required placeholder="Your message..."></textarea>
+          <div id="messageErr" class="error" style="display:none"></div>
+        </div>
+
+        <div class="actions">
+          <button type="button" class="secondary" id="clearBtn">Clear</button>
+          <button type="submit" id="submitBtn" class="btn">Submit</button>
+        </div>
+      </form>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
